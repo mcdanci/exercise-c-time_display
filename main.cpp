@@ -1,10 +1,12 @@
-#include <cstdio>
-#include <ctime>
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <cstdio>
+#include <clocale>
 
 using namespace std;
 
-void debugTime(void)
+void devTime1(void)
 {
     unsigned int counter = 1;
     time_t timer;
@@ -17,10 +19,16 @@ void debugTime(void)
     }
 }
 
+void devTime2(void)
+{
+    cout << clock() << endl;
+}
+
 int main(void)
 {
     cout << "Hello again, C++" << endl;
-    debugTime();
 
-    return 0;
+    devTime2();
+
+    return EXIT_SUCCESS;
 }
